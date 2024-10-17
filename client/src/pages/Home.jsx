@@ -1,10 +1,12 @@
+
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="home">
+    <div className="home-container">
       <h1>Welcome to the Patient Management System</h1>
-      <p>Please <Link to="/login">login</Link> to access the dashboard.</p>
+      <Link to="/login">Login</Link>
+      <Link to="/signup">Signup</Link>
     </div>
   );
 };

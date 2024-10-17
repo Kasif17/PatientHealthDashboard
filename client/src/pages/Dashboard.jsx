@@ -1,4 +1,5 @@
-import PatientList from '../components/PatientList';
+
+import PatientList from "../components/PatientDashboard/PatientList";
 
 const Dashboard = () => {
   return (

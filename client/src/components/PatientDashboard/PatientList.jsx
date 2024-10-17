@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import SearchFilter from './SearchFilter';
 
 const PatientList = () => {
@@ -12,7 +12,7 @@ const PatientList = () => {
   useEffect(() => {
     const fetchPatients = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/patients'); // Replace with your actual backend URL
+        const response = await fetch('http://localhost:5000/api/patients'); 
         const data = await response.json();
         setPatients(data);
         setFilteredPatients(data);

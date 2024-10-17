@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState } from 'react';
+// src/context/AuthContext.jsx
+import  { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login as loginService, signup as signupService } from '../services/authService';
+import { loginService, signupService } from '../services/authService'; // No need to rename these imports
 
 const AuthContext = createContext();
 
@@ -12,7 +13,7 @@ const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const userData = await loginService(email, password);
+      const userData = await loginService({ email, password }); // Pass as an object
       setUser(userData);
       navigate('/dashboard');
     } catch (error) {
